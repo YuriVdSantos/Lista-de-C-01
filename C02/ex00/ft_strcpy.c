@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yvieira- <yvieira-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 10:58:54 by yvieira-          #+#    #+#             */
-/*   Updated: 2024/08/22 11:02:15 by yvieira-         ###   ########.fr       */
+/*   Created: 2024/08/22 20:53:00 by yvieira-          #+#    #+#             */
+/*   Updated: 2024/08/26 14:04:30 by yvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <unistd.h>
+// #include <stdio.h>
 
-void	ft_putstr(char *str)
+char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (src[i] != '\0')
 	{
-		write(1, &str[i], 1);
+		dest[i] = src[i];
 		i++;
 	}
+	return (dest);
 }
-int main()
-{
-	ft_putstr("Yuri"); // call the function
-	return 0;
-}
+
+// int main()
+// {
+// 	char dest[100];
+// 	char *src = "Yuri";
+// 	ft_strcpy(dest, src);
+// 	printf("%s\n%s", dest, src);
+// }
