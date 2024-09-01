@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yvieira- <yvieira-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 20:53:00 by yvieira-          #+#    #+#             */
-/*   Updated: 2024/08/28 19:20:45 by yvieira-         ###   ########.fr       */
+/*   Created: 2024/08/29 17:58:37 by yvieira-          #+#    #+#             */
+/*   Updated: 2024/08/29 18:23:08 by yvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <unistd.h>
 
-char	*ft_strcpy(char *dest, char *src)
+void ft_putnbr(int nb)
 {
-	int	i;
+	int i;
+	int pot[12];
+	char result[12];
 
 	i = 0;
-	while (src[i] != '\0')
+	*pot = nb;
+
+	while (pot[i])
 	{
-		dest[i] = src[i];
+		result[i] = pot[i] += '0';
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	i = 0;
+	while (result[i] != '\0')
+	{
+		write(1, &result[i], 1);
+		i++;
+	}
 }
-// int main()
-// {
-// 	char dest[100];
-// 	char *src = "Yuri";
-// 	ft_strcpy(dest, src);
-// 	printf("%s\n%s", dest, src);
-// }
+
+int main(){
+	ft_putnbr(42);
+}

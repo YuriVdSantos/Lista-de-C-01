@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yvieira- <yvieira-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 20:53:00 by yvieira-          #+#    #+#             */
-/*   Updated: 2024/08/28 19:20:45 by yvieira-         ###   ########.fr       */
+/*   Created: 2024/08/28 15:30:01 by yvieira-          #+#    #+#             */
+/*   Updated: 2024/08/28 19:24:58 by yvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+int	ft_str_is_lowercase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
+		if (!(str[i] > 96 && str[i] < 123))
+		{
+			return (0);
+		}
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }
-// int main()
+// int	main(void)
 // {
-// 	char dest[100];
-// 	char *src = "Yuri";
-// 	ft_strcpy(dest, src);
-// 	printf("%s\n%s", dest, src);
+// 	int result;
+// 	result = ft_str_is_lowercase("");
+// 	printf("%d\n", result);
+// 	return (0);
 // }

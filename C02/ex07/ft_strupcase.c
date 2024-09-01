@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yvieira- <yvieira-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 20:53:00 by yvieira-          #+#    #+#             */
-/*   Updated: 2024/08/28 19:20:45 by yvieira-         ###   ########.fr       */
+/*   Created: 2024/08/28 15:50:24 by yvieira-          #+#    #+#             */
+/*   Updated: 2024/08/28 19:29:36 by yvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strupcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
+		if (str[i] > 96 && str[i] <= 123)
+		{
+			str[i] -= 32;
+		}
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (str);
 }
-// int main()
+// int	main(void)
 // {
-// 	char dest[100];
-// 	char *src = "Yuri";
-// 	ft_strcpy(dest, src);
-// 	printf("%s\n%s", dest, src);
+// 	char c[] = "hfksd";
+// 	ft_strupcase(c);
+// 	printf("%s\n", c);
+// 	return (0);
 // }

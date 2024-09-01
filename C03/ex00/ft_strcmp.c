@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yvieira- <yvieira-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 20:53:00 by yvieira-          #+#    #+#             */
-/*   Updated: 2024/08/28 19:20:45 by yvieira-         ###   ########.fr       */
+/*   Created: 2024/08/29 13:05:58 by yvieira-          #+#    #+#             */
+/*   Updated: 2024/08/29 15:59:46 by yvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int	i;
-
-	i = 0;
-	while (src[i] != '\0')
+	while (*s1 || *s2)
 	{
-		dest[i] = src[i];
-		i++;
+		if (*s1 != *s2)
+		{
+			return (*s1 - *s2);
+		}
+		else
+		{
+			s2++;
+			s1++;
+		}
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (0);
 }
-// int main()
+// int	main (void)
 // {
-// 	char dest[100];
-// 	char *src = "Yuri";
-// 	ft_strcpy(dest, src);
-// 	printf("%s\n%s", dest, src);
+// 	char s1[] = "Yurir";
+// 	char s2[] = "Yurir";
+// 	int result = ft_strncmp(s1, s2);
+// 	printf("%d", result);
 // }

@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yvieira- <yvieira-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 20:53:00 by yvieira-          #+#    #+#             */
-/*   Updated: 2024/08/28 19:20:45 by yvieira-         ###   ########.fr       */
+/*   Created: 2024/08/29 14:22:29 by yvieira-          #+#    #+#             */
+/*   Updated: 2024/08/29 16:02:11 by yvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while (src[i] != '\0')
+	j = 0;
+	while (dest[j])
+		j++;
+	while (src[i] && i < nb)
 	{
-		dest[i] = src[i];
+		dest[j + i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	dest[j + i] = '\0';
 	return (dest);
 }
-// int main()
+// int	main(void)
 // {
-// 	char dest[100];
-// 	char *src = "Yuri";
-// 	ft_strcpy(dest, src);
-// 	printf("%s\n%s", dest, src);
+// 	char c[20] = "oi,";
+// 	char s[] = " bem?";
+// 	char *res = ft_strncat(c, s, 4);
+// 	printf("%s", res);
 // }

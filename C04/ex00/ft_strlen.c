@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yvieira- <yvieira-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 20:53:00 by yvieira-          #+#    #+#             */
-/*   Updated: 2024/08/28 19:20:45 by yvieira-         ###   ########.fr       */
+/*   Created: 2024/08/29 16:06:23 by yvieira-          #+#    #+#             */
+/*   Updated: 2024/08/29 16:17:05 by yvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+int ft_strlen(char *str)
 {
-	int	i;
-
+	int i;
+	
 	i = 0;
-	while (src[i] != '\0')
+	while(*str)
 	{
-		dest[i] = src[i];
+		str++;
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (i);
 }
-// int main()
-// {
-// 	char dest[100];
-// 	char *src = "Yuri";
-// 	ft_strcpy(dest, src);
-// 	printf("%s\n%s", dest, src);
-// }
+int main()
+{
+	int result = ft_strlen("");
+	printf("%d",result);
+}
