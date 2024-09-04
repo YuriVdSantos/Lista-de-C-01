@@ -6,7 +6,7 @@
 /*   By: yvieira- <yvieira-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 13:35:37 by yvieira-          #+#    #+#             */
-/*   Updated: 2024/08/28 19:23:22 by yvieira-         ###   ########.fr       */
+/*   Updated: 2024/09/02 10:22:33 by yvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_str_is_alpha(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (!((*str > 64 && *str < 91) || (*str > 96 && *str < 123)))
+		if (!((str[i] > 64 && str[i] < 91) || (str[i] > 96 && str[i] < 123)))
 		{
 			return (0);
 		}
@@ -25,8 +25,11 @@ int	ft_str_is_alpha(char *str)
 	}
 	return (1);
 }
+
+// #include <stdio.h>
 // int	main(void)
 // {
-// 	ft_str_is_alpha("aBe7cR");
+// 	int result = ft_str_is_alpha("");
+// 	printf("%d", result);
 // 	return (0);
 // }

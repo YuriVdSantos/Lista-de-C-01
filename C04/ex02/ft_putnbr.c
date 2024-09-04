@@ -6,7 +6,7 @@
 /*   By: yvieira- <yvieira-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:58:37 by yvieira-          #+#    #+#             */
-/*   Updated: 2024/08/29 18:23:08 by yvieira-         ###   ########.fr       */
+/*   Updated: 2024/09/02 16:24:17 by yvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,23 @@
 
 void ft_putnbr(int nb)
 {
-	int i;
-	int pot[12];
-	char result[12];
-
-	i = 0;
-	*pot = nb;
-
-	while (pot[i])
+	char i;
+	
+	if (nb == -2147483647)
 	{
-		result[i] = pot[i] += '0';
-		i++;
+		write(1, "-2147483647", 11);
 	}
-	i = 0;
-	while (result[i] != '\0')
+	if (nb < 0)
 	{
-		write(1, &result[i], 1);
-		i++;
+		write(1, "-", 1);
+		nb *= -1;
 	}
+	if (nb > 9)
+		ft_putnbr(nb / 10);
+	i = nb % 10 + '0';
+	write(1, &i, 1);
 }
 
 int main(){
-	ft_putnbr(42);
+	ft_putnbr(-2);
 }

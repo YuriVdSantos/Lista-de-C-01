@@ -6,7 +6,7 @@
 /*   By: yvieira- <yvieira-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 14:05:28 by yvieira-          #+#    #+#             */
-/*   Updated: 2024/08/28 19:24:14 by yvieira-         ###   ########.fr       */
+/*   Updated: 2024/09/02 10:19:45 by yvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,18 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = src[i];
 		i++;
 	}
-	while (i == n)
+	while (i < n)
 	{
 		dest[i] = '\0';
 		i++;
 	}
 	return (dest);
 }
-// int main()
+// int	main(void)
 // {
-// 	unsigned int num = 6;
-// 	char fonte[6] = "123456";
-// 	char destino[9] = "guvuvurh";
+// 	unsigned int num = 50;
+// 	char fonte[] = "yurinbbyurinbbyurinbbyurinbb fj ";
+// 	char destino[9] = "";
 // 	printf("String fonte: %s\n", fonte);
 // 	printf("String destino: %s\n\n", destino);
 

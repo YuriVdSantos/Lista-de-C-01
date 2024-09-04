@@ -6,7 +6,7 @@
 /*   By: yvieira- <yvieira-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 14:22:29 by yvieira-          #+#    #+#             */
-/*   Updated: 2024/08/29 16:02:11 by yvieira-         ###   ########.fr       */
+/*   Updated: 2024/09/03 15:28:06 by yvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 // {
 // 	char c[20] = "oi,";
 // 	char s[] = " bem?";
-// 	char *res = ft_strncat(c, s, 4);
+// 	char *res = ft_strncat(c, s, 5);
 // 	printf("%s", res);
 // }
